@@ -65,7 +65,7 @@ git clone https://github.com/durocsongor/oooodify_frontend_backup.git (GitHub-r�
 
  ## Dokumentáció
 #### 🚀 Netlify
-| Netlify Deployed Page | [Megtekintés](oooodify-music.netlify.app) |
+| Netlify Deployed Page | [Megtekintés](https://oooodify-music.netlify.app/) |
 
 | Admin teszt | Admin:   | Jelszó:  |
 
