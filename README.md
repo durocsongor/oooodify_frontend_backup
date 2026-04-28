@@ -53,7 +53,7 @@
 
 ## ⬇️ Telepítés
 ```markdown
-git clone https://www.github.com/durocsongor/audiofy_frontend_biztonsagi.git (GitHub-ról letöltés)
+git clone https://github.com/durocsongor/oooodify_frontend_backup.git (GitHub-ról letöltés)
 ```
 
 ## 🛍️ Használat 
@@ -65,7 +65,7 @@ git clone https://www.github.com/durocsongor/audiofy_frontend_biztonsagi.git (Gi
 
  ## Dokumentáció
 #### 🚀 Netlify
-| Netlify Deployed Page | [Megtekintés](https://csongi.netlify.app/) |
+| Netlify Deployed Page | [Megtekintés](oooodify-music.netlify.app) |
 
 | Admin teszt | Admin:   | Jelszó:  |
 
