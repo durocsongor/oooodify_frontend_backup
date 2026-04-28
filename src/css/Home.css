@@ -167,10 +167,7 @@ body {
 
 .fooldalresz {
   margin-top: 100px;
-  margin-left: 1rem;
 }
-
-
 
 /* --------------------------------------------- */
 
@@ -305,7 +302,7 @@ body {
 /* Mobil */
 @media (max-width:500px) {
   .card {
-    width: 100%;
+    width: 70%;
   }
 
   .fooldalresz {
@@ -313,57 +310,11 @@ body {
   }
 }
 
-/* zene lejatszo resz kis cardban */
-
-.mini-audio {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-
-
-
 .play:hover {
   transform: scale(1.1);
 }
 
-.progress-slider {
-  flex: 1;
-  -webkit-appearance: none;
-  height: 5px;
-  border-radius: 5px;
-  background: #555;
-  cursor: pointer;
-}
 
-.progress-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 12px;
-  height: 12px;
-  background: #1DB954;
-  border-radius: 50%;
-  cursor: pointer;
-  margin-top: -3.5px;
-}
-
-.progress-slider::-moz-range-thumb {
-  width: 12px;
-  height: 12px;
-  background: #1DB954;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.volume-slider {
-  width: 60px;
-}
-
-.volume-icon {
-  font-size: 14px;
-}
 
 /* Card rugalmas méretek */
 .card {
@@ -385,43 +336,8 @@ body {
 
 @media (max-width: 500px) {
   .card {
-    width: 100%; /* mobil */
+    width: 70%; /* mobil */
   }
-}
-
-/* Mini-audio reszponzív */
-.mini-audio {
-  display: flex;
-  flex-wrap: wrap; /* kisebb képernyőn sorba tör */
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-
-/* Progress és volume sliderok rugalmasak */
-.progress-slider {
-  flex: 1 1 100px; /* rugalmasság, minimum 100px */
-  -webkit-appearance: none;
-  height: 5px;
-  border-radius: 5px;
-  background: #555;
-  cursor: pointer;
-}
-
-.volume-slider {
-  flex: 0 0 60px; /* fix szélesség */
-}
-
-/* Idő és ikonok is rugalmasak */
-.time {
-  flex: 0 0 auto;
-}
-
-.volume-icon {
-  flex: 0 0 auto;
-  font-size: 14px;
 }
 
 /* Szövegek stílusai */
