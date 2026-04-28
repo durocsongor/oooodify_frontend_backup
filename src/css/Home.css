@@ -302,7 +302,7 @@ body {
 /* Mobil */
 @media (max-width:500px) {
   .card {
-    width: 70%;
+    width: 85%;
   }
 
   .fooldalresz {
@@ -336,7 +336,7 @@ body {
 
 @media (max-width: 500px) {
   .card {
-    width: 70%; /* mobil */
+    width: 80%; /* mobil */
   }
 }
 
