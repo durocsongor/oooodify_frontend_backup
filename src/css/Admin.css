@@ -1,0 +1,432 @@
+:root {
+    --green: #1ed760;
+    --dark: #121212;
+    --card: #181818;
+    --card2: #222;
+    --danger: #ff4d4d;
+}
+
+.brendon {
+    background-image: url('../assets/brendon.jfif');
+    height: 50vh;
+    background-size: cover;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #1f1f1f, #0d0d0d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+    overflow: auto;
+}
+
+/* MAIN CONTAINER */
+
+.admin-container {
+    width: 1200px;
+    max-width: 95%;
+    margin-top: 60px;
+    padding: 40px;
+    background: rgba(24, 24, 24, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+
+}
+
+/* HEADER */
+
+.admin_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.admin-title {
+    font-size: 28px;
+    letter-spacing: 3px;
+    color: white;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-top: 40px;
+
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--green);
+}
+
+/* TABLE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+
+}
+
+th {
+    background: var(--green);
+    color: black;
+    padding: 14px;
+    font-size: 16px;
+
+}
+
+td {
+    padding: 14px;
+    background: var(--card);
+    border-bottom: 1px solid #333;
+    transition: 0.2s;
+    text-align: center;
+
+}
+
+tr:hover td {
+    background: var(--card2);
+}
+
+/* BUTTONS */
+
+button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.delete {
+    background: var(--danger);
+    color: white;
+}
+
+.delete:hover {
+    transform: scale(1.05);
+    background: #ff2e2e;
+}
+
+.modify {
+    background: var(--green);
+    color: black;
+    margin-left: 6px;
+}
+
+.modify:hover {
+    transform: scale(1.05);
+}
+
+/* MESSAGE */
+
+.hiba {
+    text-align: center;
+    margin-top: 15px;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.uzenet {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* MOBILE */
+
+@media(max-width: 768px) {
+
+    .admin-container {
+        padding: 20px;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        position: absolute;
+        left: 15px;
+        content: attr(data-label);
+        font-weight: bold;
+        color: var(--green);
+        text-align: left;
+    }
+
+}
+
+/* Overlay */
+.admin_overlay,
+.edit-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal box */
+.admin_modal,
+.edit-modal {
+    background: #333;
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 350px;
+    max-width: 90%;
+    background: rgba(24, 24, 24, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Cím és szöveg */
+.admin_modal h2,
+.edit-modal h2 {
+    margin-top: 0;
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.admin_modal p, h2 {
+    text-align: center;
+}
+
+.admin_modal p,
+.edit-modal label {
+    margin: 10px 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+/* Input */
+.edit-modal input,
+.edit-modal select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+/* Gombok */
+.admin_buttons,
+.edit-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit-megse:hover {
+    transform: scale(1.05);
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.edit-mentes:hover {
+    transform: scale(1.05);
+    background-color: green;
+    color: white;
+}
+
+button {
+    padding: 6px 14px;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+/* Cancel */
+.admin_cancel,
+.cancel-btn {
+    background: #ddd;
+    color: #333;
+}
+
+.admin_cancel:hover,
+.cancel-btn:hover {
+    transform: scale(1.05);
+    background: #ccc;
+}
+
+/* Confirm / Save */
+.admin_confirm,
+.save-btn {
+    background: #28a745;
+    color: #fff;
+}
+
+.admin_confirm:hover,
+.save-btn:hover {
+    background: rgb(156, 21, 21);
+    transform: scale(1.05);
+}
+
+.admin_confirm {
+    margin-right: 15px;
+    background-color: red;
+}
+
+.edit-btn {
+    background-color: green;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: rgb(1, 73, 1);
+}
+
+
+.edit-modal label {
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.edit-modal input {
+    margin-top: 5px;
+    background-color: #181818;
+    color: white;
+}
+
+.edit-modal select {
+    margin-top: 5px;
+    background-color: #181818;
+    color: white;
+}
+
+.admin_link_hehe {
+    text-decoration: none;
+    background-color: inherit;
+}
+
+@media(max-width: 48rem) { /* ~768px */
+
+    .admin-container {
+        padding: 2rem;
+        width: 95%;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 1.5rem;
+        border-radius: 1rem;
+        overflow: hidden;
+        background: var(--card2);
+        padding: 0.5rem 0;
+    }
+
+    td {
+        position: relative;
+        padding: 0.8rem 1rem;
+        padding-left: 50%;
+        text-align: left;
+        border-bottom: none;
+        background: var(--card);
+        margin-bottom: 0.3rem;
+        border-radius: 0.6rem;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 1rem;
+        top: 0.8rem;
+        font-weight: bold;
+        color: var(--green);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+
+    .admin_confirm,
+    .edit-btn {
+        width: 48%;
+        font-size: 0.8rem;
+        margin: 0.3rem 1%;
+    }
+
+    .admin_buttons,
+    .edit-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .admin_buttons button,
+    .edit-buttons button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 48rem) { /* mobil ~768px alatt */
+    .hehehehehehe {
+        display: none;
+    }
+}
