@@ -303,7 +303,7 @@ body {
 @media (max-width:500px) {
   .card {
     width: 85%;
-    margin-left: 3.125rem;
+    margin-left: 2.313rem;
 
   }
 
@@ -339,7 +339,7 @@ body {
 @media (max-width: 500px) {
   .card {
     width: 80%; /* mobil */
-    margin-left: 3.125rem;
+    margin-left: 2.313rem;
   }
 }
 
