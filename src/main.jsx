@@ -1,4 +1,3 @@
-// index.jsx
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -19,11 +18,11 @@ createRoot(document.getElementById('root')).render(
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
-            <Route path='register' element={<Register />} />
-            <Route path='login' element={<Login />} />
-            <Route path='like' element={<Liked />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/like' element={<Liked />} />
             <Route
-              path='admin'
+              path='/admin'
               element={
                 <AdminRoute>
                   <Admin />

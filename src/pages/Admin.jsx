@@ -276,7 +276,6 @@ export default function Admin() {
                     <thead>
                         <tr className="hehehehehehe">
                             <th>songID</th>
-                            <th>userID</th>
                             <th>Cím</th>
                             <th>Előadó</th>
                             <th>Művelet</th>
@@ -287,7 +286,6 @@ export default function Admin() {
                             <SongInfo
                                 key={song.songID}
                                 id={song.songID}
-                                uploaderID={song.userID}
                                 name={song.name}
                                 title={song.title}
                                 songDelete={() => openDeleteModal("song", song.songID)}

@@ -10,16 +10,12 @@ export async function getSongImg(song_id) {
             return null
         }
         const data = await res.json()
-        //console.log('Lekért kép adatok:', data)
         return data
     } catch (err) {
-        //console.error('Hálózati hiba:', err)
         return null
     }
 }
 
-
-// REGISTER
 export async function register(email, psw) {
     const res = await fetch(`${BACKEND_URL}/register`, {
         method: "POST",
@@ -33,7 +29,6 @@ export async function register(email, psw) {
     return data;
 }
 
-// LOGIN
 export async function login(email, psw) {
     const res = await fetch(`${BACKEND_URL}/login`, {
         method: "POST",
@@ -48,7 +43,6 @@ export async function login(email, psw) {
     return data;
 }
 
-// WHO AM I (session check)
 export async function whoami() {
     const res = await fetch(`${BACKEND_URL}/whoami`, {
         method: "GET",
@@ -64,7 +58,6 @@ export async function whoami() {
     return data;
 }
 
-// LOGOUT
 export async function logout() {
     const res = await fetch(`${BACKEND_URL}/logout`, {
         method: "POST",
@@ -81,14 +74,12 @@ export async function logout() {
 }
 
 export async function deleteuser(userID) {
-    //console.log(userID);
     const res = await fetch(`${ADMIN_URL}/deleteusers/${userID}`, {
         method: 'DELETE'
     })
 }
 
 export async function deletesongs(songID) {
-    //console.log(songID);
     const res = await fetch(`${ADMIN_URL}/deletesongs/${songID}`, {
         method: 'DELETE'
     })
@@ -110,7 +101,6 @@ export async function getLikedSongs() {
 }
 
 export async function toggleLikeSong(songID) {
-    //console.log("Toggling like for songID:", songID);
     const res = await fetch(`${BACKEND_URL}/like/${songID}`, {
         method: "POST",
         credentials: "include",
@@ -123,7 +113,5 @@ export async function toggleLikeSong(songID) {
         return { error: data?.error };
     }
 
-    //console.log("Like toggle response:", data);
     return data;
 }
-

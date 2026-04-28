@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { whoami, logout } from "../api"
-import { Navigate, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import Card from "../components/Card";
 
 import { Link } from "react-router-dom";
@@ -13,14 +13,9 @@ export default function Home() {
     const navigate = useNavigate();
     const [musics, setMusics] = useState([]);
 
-
-    //console.log(errorUser)
-    //console.log(user);
-
     useEffect(() => {
         async function load() {
             const data = await whoami()
-            //console.log(data);
             if (data.error) {
                 return setErrorUser(data.error)
             }
@@ -34,9 +29,7 @@ export default function Home() {
             try {
                 const res = await fetch("/user/musics");
                 const data = await res.json();
-                //console.log("Musics response:", data);
                 if (data && data.length > 0) {
-                    //console.log("First song:", data[0]);
                 }
                 setMusics(data);
             } catch (err) {
@@ -48,7 +41,6 @@ export default function Home() {
 
     async function onLogout() {
         const data = await logout()
-        //console.log(data);
         if (data.error) {
             return setErrorUser(data.error)
         }
@@ -136,4 +128,3 @@ export default function Home() {
         </div>
     )
 }
-// export function NavBar({user, onLogout})
